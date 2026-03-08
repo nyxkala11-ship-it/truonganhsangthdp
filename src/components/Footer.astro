@@ -3,9 +3,15 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
+    <div class="gradientfooter">
+        &copy; {today.getFullYear()} @ NYX.
+    </div>
+    <div class="gradientfooter-mid"></div>
+    <div class="contentfooter">
+    </div><!--
 	<div class="social-links">
 		<a href="https://m.webtoo.ls/@astro" target="_blank">
+		KALA. Mọi quyền được bảo lưu
 			<span class="sr-only">Follow Astro on Mastodon</span>
 			<svg
 				viewBox="0 0 16 16"
@@ -38,25 +44,43 @@ const today = new Date();
 			>
 		</a>
 	</div>
+	-->
 </footer>
 <style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
+    .contentfooter {
+        background: linear-gradient(var(--gray-gradient)) no-repeat;
+        width: 100%;
+        height: 5vh;
+    }
+    .gradientfooter-mid {
+        background: linear-gradient(var(--gray-gradient-mid)) no-repeat;
+        width: 100%;
+        height: 5vh;
+    }
+    .gradientfooter {
+        background: #fff;
+        height: 5vh;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    footer {
+        color: rgb(var(--gray));
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 1em;
+    }
+    .social-links a {
+        text-decoration: none;
+        color: rgb(var(--gray));
+    }
+    .social-links a:hover {
+        color: rgb(var(--gray-dark));
+    }
 </style>
